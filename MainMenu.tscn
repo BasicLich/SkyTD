@@ -1,0 +1,466 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://Logo.png" type="Texture" id=1]
+[ext_resource path="res://colored_transparent.png" type="Texture" id=2]
+[ext_resource path="res://MainMenu/MM_DeathLord.tres" type="Texture" id=3]
+[ext_resource path="res://MainMenu/MM_KoboldTank.tres" type="Texture" id=4]
+[ext_resource path="res://MainMenu/MM_Siren.tres" type="Texture" id=5]
+[ext_resource path="res://MainMenu/MM_TheAlpha.tres" type="Texture" id=6]
+[ext_resource path="res://MainMenu/MM_T3_C.tres" type="Texture" id=7]
+[ext_resource path="res://MainMenu/MM_T3_G.tres" type="Texture" id=8]
+[ext_resource path="res://MainMenu/MM_T3_B.tres" type="Texture" id=9]
+[ext_resource path="res://MainMenu/MM_Wizard.tres" type="Texture" id=10]
+[ext_resource path="res://MainMenu/MM_Player.tres" type="Texture" id=11]
+[ext_resource path="res://MainMenu/MM_T1_W.tres" type="Texture" id=12]
+[ext_resource path="res://MainMenu/MM_T1.tres" type="Texture" id=13]
+[ext_resource path="res://MainMenu/MM_T2_B.tres" type="Texture" id=14]
+[ext_resource path="res://MainMenu/MM_T2_W.tres" type="Texture" id=15]
+[ext_resource path="res://MainMenu/MM_T2.tres" type="Texture" id=16]
+[ext_resource path="res://MainMenu/MM_T3_I.tres" type="Texture" id=17]
+[ext_resource path="res://MainMenu/MM_T3.tres" type="Texture" id=18]
+[ext_resource path="res://font_0.fnt" type="BitmapFont" id=19]
+[ext_resource path="res://PlayButton.cs" type="Script" id=20]
+[ext_resource path="res://new_spriteframes.tres" type="SpriteFrames" id=21]
+[ext_resource path="res://UIRoot.cs" type="Script" id=22]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.121569, 0.0313726, 0.341176, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="TileSet" id=3]
+0/name = "colored_transparent.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 68, 0, 17, 17 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "colored_transparent.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 833, 102 )
+1/tile_mode = 2
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 17, 17 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "colored_transparent.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 833, 391 )
+2/tile_mode = 2
+2/autotile/icon_coordinate = Vector2( 0, 0 )
+2/autotile/tile_size = Vector2( 17, 17 )
+2/autotile/spacing = 0
+2/autotile/occluder_map = [  ]
+2/autotile/navpoly_map = [  ]
+2/autotile/priority_map = [  ]
+2/autotile/z_index_map = [  ]
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+
+[sub_resource type="Gradient" id=4]
+colors = PoolColorArray( 0, 0, 0, 1, 1, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.180392, 0.180392, 0.180392, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.105882, 0, 0.317647, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="Root" type="Node2D" parent="."]
+script = ExtResource( 22 )
+
+[node name="MainMenuProper" type="Node2D" parent="Root"]
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/MainMenuProper"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 300.0
+margin_top = 270.0
+margin_right = 500.0
+margin_bottom = 458.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/MainMenuProper/MarginContainer"]
+margin_right = 200.0
+margin_bottom = 188.0
+
+[node name="PlayButton" type="Button" parent="Root/MainMenuProper/MarginContainer/VBoxContainer"]
+margin_right = 200.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 200, 60 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 19 )
+text = "PLAY"
+script = ExtResource( 20 )
+
+[node name="BestiaryButton" type="Button" parent="Root/MainMenuProper/MarginContainer/VBoxContainer"]
+margin_top = 64.0
+margin_right = 200.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 200, 60 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 19 )
+text = "BESTIARY"
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitButton" type="Button" parent="Root/MainMenuProper/MarginContainer/VBoxContainer"]
+margin_top = 128.0
+margin_right = 200.0
+margin_bottom = 188.0
+rect_min_size = Vector2( 200, 60 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 19 )
+text = "EXIT"
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Root/MainMenuProper"]
+anchor_right = 1.0
+margin_left = -8.47571
+margin_top = -2.11893
+margin_right = 591.524
+margin_bottom = 297.881
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Root/MainMenuProper/CenterContainer"]
+margin_right = 600.0
+margin_bottom = 300.0
+mouse_filter = 2
+texture = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Root/MainMenuProper"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Root/MainMenuProper/CanvasLayer"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Root/MainMenuProper/CanvasLayer/ParallaxBackground"]
+
+[node name="TileMap" type="TileMap" parent="Root/MainMenuProper/CanvasLayer/ParallaxBackground/ParallaxLayer"]
+tile_set = SubResource( 3 )
+cell_size = Vector2( 17, 17 )
+format = 1
+tile_data = PoolIntArray( 720921, 2, 786433, 720923, 2, 524305, 720925, 2, 786433, 786435, 2, 1245186, 786457, 2, 1179659, 786458, 2, 786432, 786459, 2, 1179659, 786460, 2, 786432, 786461, 2, 1179659, 851968, 2, 327698, 851969, 2, 327698, 851970, 2, 327698, 851971, 2, 327698, 851972, 2, 327698, 851973, 2, 327698, 851974, 2, 327698, 851979, 2, 1245186, 851993, 2, 1179659, 851994, 2, 851970, 851995, 2, 1179659, 851996, 2, 851970, 851997, 2, 1179659, 917511, 2, 327698, 917512, 2, 327698, 917513, 2, 327698, 917514, 2, 327698, 917515, 2, 327698, 917516, 2, 327698, 917517, 2, 327698, 917518, 2, 327698, 917519, 2, 327698, 917520, 2, 327698, 917521, 2, 327698, 917522, 2, 327698, 917523, 2, 327698, 917524, 2, 327698, 917525, 2, 327698, 917529, 2, 1179659, 917530, 2, 1179658, 917531, 2, 1114118, 917532, 2, 1179658, 917533, 2, 1179659, 983062, 2, 327698, 983063, 2, 327698, 983064, 2, 327698, 983065, 2, 327698, 983066, 2, 327698, 983067, 2, 327698, 983068, 2, 327698, 983069, 2, 327698, 983070, 2, 327698, 983071, 2, 327698, 983072, 2, 327698, 983073, 2, 327698, 983074, 2, 327698, 983078, 2, 1245186, 983085, 2, 1245186, 1048611, 2, 327698, 1048612, 2, 327698, 1048613, 2, 327698, 1048614, 2, 327698, 1048615, 2, 327698, 1048616, 2, 327698, 1048617, 2, 327698, 1048618, 2, 327698, 1048619, 2, 327698, 1048620, 2, 327698, 1048621, 2, 327698, 1048622, 2, 327698, 1114112, 2, 4, 1114113, 2, 4, 1114114, 2, 4, 1114115, 2, 4, 1114116, 2, 4, 1114117, 2, 4, 1114118, 2, 4, 1179648, 2, 4, 1179649, 2, 4, 1179650, 2, 4, 1179651, 2, 4, 1179652, 2, 4, 1179653, 2, 4, 1179654, 2, 4, 1179655, 2, 4, 1179656, 2, 4, 1179657, 2, 4, 1245184, 2, 4, 1245185, 2, 4, 1245186, 2, 4, 1245187, 2, 4, 1245188, 2, 4, 1245189, 2, 4, 1245190, 2, 4, 1245191, 2, 4, 1245192, 2, 4, 1245193, 2, 4, 1245194, 2, 4, 1245195, 2, 4, 1245196, 2, 4, 1245197, 2, 4, 1310720, 2, 4, 1310721, 2, 4, 1310722, 2, 4, 1310723, 2, 4, 1310724, 2, 4, 1310725, 2, 4, 1310726, 2, 4, 1310727, 2, 4, 1310728, 2, 4, 1310729, 2, 4, 1310730, 2, 4, 1310731, 2, 4, 1310732, 2, 4, 1310733, 2, 4, 1310734, 2, 4, 1310735, 2, 4, 1310736, 2, 4, 1376256, 2, 4, 1376257, 2, 4, 1376258, 2, 4, 1376259, 2, 4, 1376260, 2, 4, 1376261, 2, 3, 1376262, 2, 4, 1376263, 2, 4, 1376264, 2, 4, 1376265, 2, 4, 1376266, 2, 4, 1376267, 2, 4, 1376268, 2, 4, 1376269, 2, 4, 1376270, 2, 4, 1376271, 2, 4, 1376272, 2, 4, 1376273, 2, 4, 1376274, 2, 4, 1376275, 2, 4, 1376276, 2, 4, 1376277, 2, 4, 1441792, 2, 4, 1441793, 2, 4, 1441794, 2, 4, 1441795, 2, 4, 1441796, 2, 4, 1441797, 2, 3, 1441798, 2, 4, 1441799, 2, 4, 1441800, 2, 4, 1441801, 2, 4, 1441802, 2, 4, 1441803, 2, 4, 1441804, 2, 4, 1441805, 2, 4, 1441806, 2, 4, 1441807, 2, 4, 1441808, 2, 4, 1441809, 2, 4, 1441810, 2, 4, 1441811, 2, 4, 1441812, 2, 4, 1441813, 2, 4, 1441814, 2, 4, 1441815, 2, 4, 1441816, 2, 4, 1441817, 2, 4, 1441818, 2, 4, 1507328, 2, 4, 1507329, 2, 4, 1507330, 2, 4, 1507331, 2, 4, 1507332, 2, 4, 1507333, 2, 3, 1507334, 2, 4, 1507335, 2, 4, 1507336, 2, 4, 1507337, 2, 4, 1507338, 2, 4, 1507339, 2, 4, 1507340, 2, 4, 1507341, 2, 4, 1507342, 2, 4, 1507343, 2, 4, 1507344, 2, 4, 1507345, 2, 4, 1507346, 2, 4, 1507347, 2, 4, 1507348, 2, 4, 1507349, 2, 4, 1507350, 2, 4, 1507351, 2, 4, 1507352, 2, 4, 1507353, 2, 4, 1507354, 2, 4, 1507355, 2, 4, 1507356, 2, 4, 1507357, 2, 4, 1507358, 2, 4, 1507359, 2, 4, 1507360, 2, 4, 1507361, 2, 4, 1507362, 2, 4, 1572864, 2, 4, 1572865, 2, 4, 1572866, 2, 4, 1572867, 2, 4, 1572868, 2, 4, 1572869, 2, 3, 1572870, 2, 4, 1572871, 2, 4, 1572872, 2, 4, 1572873, 2, 4, 1572874, 2, 4, 1572875, 2, 4, 1572876, 2, 3, 1572877, 2, 3, 1572878, 2, 4, 1572879, 2, 4, 1572880, 2, 4, 1572881, 2, 4, 1572882, 2, 4, 1572883, 2, 4, 1572884, 2, 4, 1572885, 2, 4, 1572886, 2, 4, 1572887, 2, 4, 1572888, 2, 4, 1572889, 2, 4, 1572890, 2, 4, 1572891, 2, 4, 1572892, 2, 4, 1572893, 2, 4, 1572894, 2, 4, 1572895, 2, 4, 1572896, 2, 4, 1572897, 2, 4, 1572898, 2, 4, 1572899, 2, 4, 1572900, 2, 4, 1572901, 2, 4, 1638400, 2, 4, 1638401, 2, 4, 1638402, 2, 4, 1638403, 2, 4, 1638404, 2, 4, 1638405, 2, 4, 1638406, 2, 4, 1638407, 2, 4, 1638414, 2, 3, 1638415, 2, 4, 1638416, 2, 4, 1638417, 2, 4, 1638418, 2, 4, 1638419, 2, 4, 1638420, 2, 4, 1638421, 2, 4, 1638422, 2, 4, 1638423, 2, 4, 1638424, 2, 4, 1638425, 2, 4, 1638426, 2, 4, 1638427, 2, 4, 1638428, 2, 4, 1638429, 2, 4, 1638430, 2, 4, 1638431, 2, 4, 1638432, 2, 4, 1638433, 2, 4, 1638434, 2, 4, 1638435, 2, 4, 1638436, 2, 4, 1638437, 2, 4, 1638438, 2, 4, 1638439, 2, 4, 1638440, 2, 4, 1638441, 2, 4, 1703936, 2, 4, 1703937, 2, 4, 1703938, 2, 4, 1703939, 2, 4, 1703940, 2, 4, 1703941, 2, 4, 1703942, 2, 4, 1703943, 2, 4, 1703953, 2, 4, 1703954, 2, 4, 1703955, 2, 4, 1703956, 2, 4, 1703957, 2, 4, 1703958, 2, 4, 1703959, 2, 4, 1703960, 2, 4, 1703961, 2, 4, 1703962, 2, 3, 1703963, 2, 3, 1703964, 2, 3, 1703965, 2, 3, 1703966, 2, 3, 1703967, 2, 4, 1703968, 2, 4, 1703969, 2, 4, 1703970, 2, 4, 1703971, 2, 3, 1703972, 2, 3, 1703973, 2, 4, 1703974, 2, 4, 1703975, 2, 4, 1703976, 2, 4, 1703977, 2, 4, 1703978, 2, 4, 1703979, 2, 4, 1703980, 2, 4, 1703981, 2, 4, 1703982, 2, 4, 1703983, 2, 4, 1769472, 2, 4, 1769473, 2, 4, 1769474, 2, 4, 1769475, 2, 4, 1769476, 2, 4, 1769477, 2, 4, 1769478, 2, 4, 1769491, 2, 4, 1769492, 2, 4, 1769493, 2, 4, 1769494, 2, 4, 1769495, 2, 3, 1769496, 2, 3, 1769497, 2, 3, 1769498, 2, 4, 1769499, 2, 4, 1769500, 2, 4, 1769501, 2, 4, 1769502, 2, 4, 1769503, 2, 4, 1769504, 2, 4, 1769505, 2, 4, 1769506, 2, 4, 1769507, 2, 4, 1769508, 2, 3, 1769509, 2, 3, 1769510, 2, 3, 1769511, 2, 4, 1769512, 2, 4, 1769513, 2, 4, 1769514, 2, 4, 1769515, 2, 4, 1769516, 2, 4, 1769517, 2, 4, 1769518, 2, 4, 1769519, 2, 4, 1835008, 2, 4, 1835009, 2, 4, 1835010, 2, 4, 1835011, 2, 4, 1835012, 2, 4, 1835013, 2, 4, 1835014, 2, 4, 1835019, 2, 327699, 1835029, 2, 3, 1835030, 2, 3, 1835031, 2, 4, 1835032, 2, 4, 1835033, 2, 4, 1835034, 2, 4, 1835035, 2, 4, 1835036, 2, 4, 1835037, 2, 4, 1835038, 2, 4, 1835039, 2, 4, 1835040, 2, 4, 1835041, 2, 4, 1835042, 2, 4, 1835043, 2, 4, 1835044, 2, 4, 1835045, 2, 4, 1835046, 2, 4, 1835047, 2, 3, 1835048, 2, 3, 1835049, 2, 3, 1835050, 2, 4, 1835051, 2, 4, 1835052, 2, 4, 1835053, 2, 4, 1835054, 2, 4, 1835055, 2, 4, 1900544, 2, 4, 1900545, 2, 4, 1900546, 2, 4, 1900547, 2, 3, 1900548, 2, 4, 1900549, 2, 4, 1900550, 2, 4, 1900551, 2, 4, 1900552, 2, 131093, 1900554, 2, 720914, 1900555, 2, 720915, 1900556, 2, 720916, 1900557, 2, 131093, 1900566, 2, 4, 1900567, 2, 4, 1900568, 2, 4, 1900569, 2, 4, 1900570, 2, 4, 1900571, 2, 4, 1900572, 2, 4, 1900573, 2, 4, 1900574, 2, 4, 1900575, 2, 4, 1900576, 2, 4, 1900577, 2, 4, 1900578, 2, 4, 1900579, 2, 4, 1900580, 2, 4, 1900581, 2, 4, 1900582, 2, 4, 1900583, 2, 4, 1900584, 2, 4, 1900585, 2, 4, 1900586, 2, 3, 1900587, 2, 3, 1900588, 2, 4, 1900589, 2, 4, 1900590, 2, 4, 1900591, 2, 4, 1966080, 2, 4, 1966081, 2, 4, 1966082, 2, 4, 1966083, 2, 3, 1966084, 2, 3, 1966085, 2, 4, 1966086, 2, 4, 1966087, 2, 4, 1966088, 2, 4, 1966089, 2, 4, 1966090, 2, 4, 1966091, 2, 4, 1966092, 2, 4, 1966093, 2, 3, 1966095, 2, 131093, 1966096, 2, 131093, 1966103, 2, 4, 1966104, 2, 4, 1966105, 2, 4, 1966106, 2, 4, 1966107, 2, 4, 1966108, 2, 4, 1966109, 2, 4, 1966110, 2, 4, 1966111, 2, 4, 1966112, 2, 4, 1966113, 2, 4, 1966114, 2, 4, 1966115, 2, 4, 1966116, 2, 4, 1966117, 2, 4, 1966118, 2, 4, 1966119, 2, 4, 1966120, 2, 4, 1966121, 2, 3, 1966122, 2, 3, 1966123, 2, 3, 1966124, 2, 3, 1966125, 2, 4, 1966126, 2, 4, 1966127, 2, 4, 2031616, 2, 4, 2031617, 2, 4, 2031618, 2, 4, 2031619, 2, 4, 2031620, 2, 4, 2031621, 2, 3, 2031622, 2, 3, 2031623, 2, 4, 2031624, 2, 4, 2031625, 2, 4, 2031626, 2, 4, 2031627, 2, 4, 2031628, 2, 4, 2031629, 2, 3, 2031630, 2, 4, 2031631, 2, 4, 2031632, 2, 4, 2031633, 2, 4, 2031635, 2, 131093, 2031636, 2, 131093, 2031637, 2, 131093, 2031639, 2, 4, 2031640, 2, 4, 2031641, 2, 4, 2031642, 2, 4, 2031643, 2, 4, 2031644, 2, 4, 2031645, 2, 4, 2031646, 2, 4, 2031647, 2, 4, 2031648, 2, 4, 2031649, 2, 4, 2031650, 2, 4, 2031651, 2, 4, 2031652, 2, 3, 2031653, 2, 3, 2031654, 2, 3, 2031655, 2, 3, 2031656, 2, 3, 2031657, 2, 4, 2031658, 2, 4, 2031659, 2, 4, 2031660, 2, 4, 2031661, 2, 4, 2031662, 2, 4, 2031663, 2, 4, 2097152, 2, 4, 2097153, 2, 4, 2097154, 2, 4, 2097155, 2, 4, 2097156, 2, 4, 2097157, 2, 4, 2097158, 2, 3, 2097159, 2, 3, 2097160, 2, 4, 2097161, 2, 4, 2097162, 2, 4, 2097163, 2, 4, 2097164, 2, 4, 2097165, 2, 4, 2097166, 2, 4, 2097167, 2, 4, 2097168, 2, 4, 2097169, 2, 4, 2097170, 2, 4, 2097171, 2, 4, 2097172, 2, 4, 2097173, 2, 3, 2097174, 2, 3, 2097175, 2, 4, 2097176, 2, 4, 2097177, 2, 4, 2097178, 2, 4, 2097179, 2, 4, 2097180, 2, 4, 2097181, 2, 4, 2097182, 2, 4, 2097183, 2, 3, 2097184, 2, 3, 2097185, 2, 3, 2097186, 2, 3, 2097187, 2, 3, 2097188, 2, 4, 2097189, 2, 4, 2097190, 2, 4, 2097191, 2, 4, 2097192, 2, 4, 2097193, 2, 4, 2097194, 2, 4, 2097195, 2, 4, 2097196, 2, 4, 2097197, 2, 4, 2097198, 2, 4, 2097199, 2, 4, 2162688, 2, 4, 2162689, 2, 4, 2162690, 2, 4, 2162691, 2, 4, 2162692, 2, 4, 2162693, 2, 4, 2162694, 2, 4, 2162695, 2, 4, 2162696, 2, 4, 2162697, 2, 4, 2162698, 2, 4, 2162699, 2, 4, 2162700, 2, 4, 2162701, 2, 4, 2162702, 2, 4, 2162703, 2, 4, 2162704, 2, 4, 2162705, 2, 4, 2162706, 2, 4, 2162707, 2, 4, 2162708, 2, 4, 2162709, 2, 4, 2162710, 2, 4, 2162711, 2, 4, 2162712, 2, 4, 2162713, 2, 4, 2162714, 2, 4, 2162715, 2, 4, 2162716, 2, 3, 2162717, 2, 3, 2162718, 2, 3, 2162719, 2, 4, 2162720, 2, 4, 2162721, 2, 4, 2162722, 2, 4, 2162723, 2, 4, 2162724, 2, 4, 2162725, 2, 4, 2162726, 2, 4, 2162727, 2, 4, 2162728, 2, 4, 2162729, 2, 4, 2162730, 2, 4, 2162731, 2, 4, 2162732, 2, 4, 2162733, 2, 4, 2162734, 2, 4, 2162735, 2, 4, 2228224, 2, 4, 2228225, 2, 4, 2228226, 2, 4, 2228227, 2, 4, 2228228, 2, 4, 2228229, 2, 4, 2228230, 2, 4, 2228231, 2, 4, 2228232, 2, 4, 2228233, 2, 4, 2228234, 2, 4, 2228235, 2, 4, 2228236, 2, 4, 2228237, 2, 4, 2228238, 2, 4, 2228239, 2, 4, 2228240, 2, 4, 2228241, 2, 4, 2228242, 2, 4, 2228243, 2, 4, 2228244, 2, 4, 2228245, 2, 4, 2228246, 2, 4, 2228247, 2, 4, 2228248, 2, 4, 2228249, 2, 4, 2228250, 2, 4, 2228251, 2, 4, 2228252, 2, 4, 2228253, 2, 4, 2228254, 2, 4, 2228255, 2, 4, 2228256, 2, 4, 2228257, 2, 4, 2228258, 2, 4, 2228259, 2, 4, 2228260, 2, 4, 2228261, 2, 4, 2228262, 2, 4, 2228263, 2, 4, 2228264, 2, 4, 2228265, 2, 4, 2228266, 2, 4, 2228267, 2, 4, 2228268, 2, 4, 2228269, 2, 4, 2228270, 2, 4, 2228271, 2, 4, 2293760, 2, 4, 2293761, 2, 4, 2293762, 2, 4, 2293763, 2, 4, 2293764, 2, 4, 2293765, 2, 4, 2293766, 2, 4, 2293767, 2, 4, 2293768, 2, 4, 2293769, 2, 4, 2293770, 2, 4, 2293771, 2, 4, 2293772, 2, 4, 2293773, 2, 4, 2293774, 2, 4, 2293775, 2, 4, 2293776, 2, 4, 2293777, 2, 4, 2293778, 2, 4, 2293779, 2, 4, 2293780, 2, 4, 2293781, 2, 4, 2293782, 2, 4, 2293783, 2, 4, 2293784, 2, 4, 2293785, 2, 4, 2293786, 2, 4, 2293787, 2, 4, 2293788, 2, 4, 2293789, 2, 4, 2293790, 2, 4, 2293791, 2, 4, 2293792, 2, 4, 2293793, 2, 4, 2293794, 2, 4, 2293795, 2, 4, 2293796, 2, 4, 2293797, 2, 4, 2293798, 2, 4, 2293799, 2, 4, 2293800, 2, 4, 2293801, 2, 4, 2293802, 2, 4, 2293803, 2, 4, 2293804, 2, 4, 2293805, 2, 4, 2293806, 2, 4, 2293807, 2, 4, 2359296, 2, 4, 2359297, 2, 4, 2359298, 2, 4, 2359299, 2, 4, 2359300, 2, 4, 2359301, 2, 4, 2359302, 2, 4, 2359303, 2, 4, 2359304, 2, 4, 2359305, 2, 4, 2359306, 2, 4 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Root/MainMenuProper/CanvasLayer/ParallaxBackground"]
+
+[node name="MM_Player" type="Sprite" parent="Root/MainMenuProper/CanvasLayer/ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 630.097, 433.058 )
+rotation = -0.253073
+scale = Vector2( 20, 20 )
+texture = ExtResource( 11 )
+
+[node name="MM_Wizard" type="Sprite" parent="Root/MainMenuProper/CanvasLayer/ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 176.59, 408.406 )
+rotation = 0.380482
+scale = Vector2( 20, 20 )
+texture = ExtResource( 10 )
+
+[node name="MM_T3" type="Sprite" parent="Root/MainMenuProper/CanvasLayer/ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 742.558, 341.151 )
+rotation = -0.127409
+scale = Vector2( 5, 5 )
+texture = ExtResource( 16 )
+
+[node name="MM_T2_W" type="Sprite" parent="Root/MainMenuProper/CanvasLayer/ParallaxBackground/ParallaxLayer3/MM_T3"]
+position = Vector2( 1.52588e-05, -12.0779 )
+texture = ExtResource( 15 )
+
+[node name="MM_T2_B" type="Sprite" parent="Root/MainMenuProper/CanvasLayer/ParallaxBackground/ParallaxLayer3/MM_T3"]
+position = Vector2( 7.41624, 0.423798 )
+texture = ExtResource( 14 )
+
+[node name="MM_T1" type="Sprite" parent="Root/MainMenuProper/CanvasLayer/ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 742.039, 149.626 )
+rotation = -0.253073
+scale = Vector2( 5, 5 )
+texture = ExtResource( 13 )
+
+[node name="MM_T1_W" type="Sprite" parent="Root/MainMenuProper/CanvasLayer/ParallaxBackground/ParallaxLayer3/MM_T1"]
+position = Vector2( 0.224731, -7.02617 )
+texture = ExtResource( 12 )
+
+[node name="MM_T2" type="Sprite" parent="Root/MainMenuProper/CanvasLayer/ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 646.687, 72.8152 )
+rotation = -0.253073
+scale = Vector2( 5, 5 )
+texture = ExtResource( 13 )
+
+[node name="MM_T1_W" type="Sprite" parent="Root/MainMenuProper/CanvasLayer/ParallaxBackground/ParallaxLayer3/MM_T2"]
+position = Vector2( 0.224731, -7.02617 )
+texture = ExtResource( 12 )
+
+[node name="MM_Siren" type="Sprite" parent="Root/MainMenuProper"]
+position = Vector2( 64.3538, 168.745 )
+rotation = 0.125664
+scale = Vector2( 5, 5 )
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="MM_KoboldTank" type="Sprite" parent="Root/MainMenuProper"]
+position = Vector2( 5.10898, 553.613 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 4 )
+
+[node name="MM_DeathLord" type="Sprite" parent="Root/MainMenuProper"]
+position = Vector2( 290.197, 526.886 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 3 )
+
+[node name="MM_TheAlpha" type="Sprite" parent="Root/MainMenuProper"]
+position = Vector2( 770.407, 594.214 )
+rotation = 2.47488
+scale = Vector2( 5, 5 )
+texture = ExtResource( 6 )
+
+[node name="MM_T3" type="Sprite" parent="Root/MainMenuProper"]
+position = Vector2( 660.204, 258.206 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 18 )
+
+[node name="MM_T3_G" type="Sprite" parent="Root/MainMenuProper/MM_T3"]
+position = Vector2( 0.0658493, -12.3083 )
+texture = ExtResource( 8 )
+
+[node name="MM_T3_B" type="Sprite" parent="Root/MainMenuProper/MM_T3"]
+position = Vector2( -0.159, -23.17 )
+texture = ExtResource( 9 )
+
+[node name="MM_T3_C" type="Sprite" parent="Root/MainMenuProper/MM_T3"]
+position = Vector2( -8.858, 0.15 )
+texture = ExtResource( 7 )
+
+[node name="MM_T3_I" type="Sprite" parent="Root/MainMenuProper/MM_T3"]
+position = Vector2( 6.881, 1.823 )
+texture = ExtResource( 17 )
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Root/MainMenuProper/MM_T3"]
+amount = 12
+lifetime = 2.0
+emission_shape = 2
+emission_rect_extents = Vector2( 9, 3 )
+direction = Vector2( 0, -1 )
+gravity = Vector2( 0, 0 )
+initial_velocity = 8.0
+color_ramp = SubResource( 4 )
+
+[node name="Bestiary" type="Node2D" parent="Root"]
+visible = false
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/Bestiary"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 50.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Root/Bestiary/MarginContainer"]
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Root/Bestiary/MarginContainer/CenterContainer"]
+mouse_filter = 2
+
+[node name="BestiaryThings" type="PanelContainer" parent="Root/Bestiary/MarginContainer/CenterContainer/HSplitContainer"]
+margin_right = 100.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 100, 500 )
+mouse_filter = 2
+custom_styles/panel = SubResource( 5 )
+
+[node name="BestiaryLogOverlay" type="PanelContainer" parent="Root/Bestiary/MarginContainer/CenterContainer/HSplitContainer"]
+margin_left = 112.0
+margin_right = 712.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 600, 500 )
+mouse_filter = 2
+custom_styles/panel = SubResource( 5 )
+
+[node name="Container" type="Container" parent="Root/Bestiary/MarginContainer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/Bestiary/MarginContainer/Container"]
+margin_left = 200.0
+margin_top = 512.0
+margin_right = 600.0
+
+[node name="Button" type="Button" parent="Root/Bestiary/MarginContainer/Container/MarginContainer"]
+margin_right = 400.0
+margin_bottom = 18.0
+custom_styles/hover = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = ExtResource( 19 )
+text = "CLOSE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="Container" parent="Root/Bestiary"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/Bestiary/Container"]
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 140.0
+margin_bottom = 540.0
+
+[node name="ScrollListEnemyIcons" type="ScrollContainer" parent="Root/Bestiary/Container/MarginContainer"]
+margin_right = 80.0
+margin_bottom = 480.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollBoxEnemyIcons" type="VBoxContainer" parent="Root/Bestiary/Container/MarginContainer/ScrollListEnemyIcons"]
+margin_right = 64.0
+margin_bottom = 64.0
+
+[node name="BtnEnemyIcon" type="Button" parent="Root/Bestiary/Container/MarginContainer/ScrollListEnemyIcons/ScrollBoxEnemyIcons"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnemyIcon" type="AnimatedSprite" parent="Root/Bestiary/Container/MarginContainer/ScrollListEnemyIcons/ScrollBoxEnemyIcons/BtnEnemyIcon"]
+position = Vector2( 32, 32 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 21 )
+frame = 121
+
+[node name="Container2" type="Container" parent="Root/Bestiary"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/Bestiary/Container2"]
+margin_left = 164.0
+margin_top = 52.0
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 2
+
+[node name="BestiaryLog" type="Container" parent="Root/Bestiary/Container2/MarginContainer"]
+mouse_filter = 2
+
+[node name="EnemySprite" type="AnimatedSprite" parent="Root/Bestiary/Container2/MarginContainer/BestiaryLog"]
+position = Vector2( 64, 64 )
+scale = Vector2( 6, 6 )
+frames = ExtResource( 21 )
+frame = 121
+
+[node name="LockIcon" type="AnimatedSprite" parent="Root/Bestiary/Container2/MarginContainer/BestiaryLog"]
+position = Vector2( 64, 64 )
+scale = Vector2( 6, 6 )
+frames = ExtResource( 21 )
+frame = 470
+
+[node name="Container" type="Container" parent="Root/Bestiary/Container2/MarginContainer/BestiaryLog"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 593.0
+margin_bottom = 493.0
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/Bestiary/Container2/MarginContainer/BestiaryLog/Container"]
+margin_left = 12.0
+margin_top = 128.0
+margin_right = 586.0
+margin_bottom = 486.0
+mouse_filter = 2
+
+[node name="EnemyDescription" type="RichTextLabel" parent="Root/Bestiary/Container2/MarginContainer/BestiaryLog/Container/MarginContainer"]
+margin_right = 574.0
+margin_bottom = 358.0
+custom_fonts/normal_font = ExtResource( 19 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "ENEMY DESCRIPTION HERE"
+text = "ENEMY DESCRIPTION HERE"
+
+[node name="Container2" type="Container" parent="Root/Bestiary/Container2/MarginContainer/BestiaryLog"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 593.0
+margin_bottom = 493.0
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/Bestiary/Container2/MarginContainer/BestiaryLog/Container2"]
+margin_left = 128.0
+margin_top = 12.0
+margin_right = 582.0
+margin_bottom = 100.0
+mouse_filter = 2
+
+[node name="EnemyName" type="RichTextLabel" parent="Root/Bestiary/Container2/MarginContainer/BestiaryLog/Container2/MarginContainer"]
+margin_right = 454.0
+margin_bottom = 88.0
+custom_fonts/normal_font = ExtResource( 19 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]ENEMY NAME HERE[center]"
+text = "ENEMY NAME HERE"
